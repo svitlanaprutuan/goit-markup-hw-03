@@ -20,6 +20,31 @@ body {
   letter-spacing: 0.03em;
   color: var(--main-text-color);
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+.lessons-img {
+  display: block;
+}
+
+.container {
+  outline: 1px solid red;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 .link {
   text-decoration: none;
@@ -33,6 +58,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
 }
+
 .button {
   font-family: inherit;
   color: currentColor;
@@ -47,6 +73,8 @@ body {
 .filters-list,
 .project-list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* 
@@ -57,36 +85,73 @@ body {
 .header {
 }
 
-.navigation-link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
+.header-container {
+  display: flex;
+  align-items: center;
 }
 
-.navigation-link:hover,
-.navigation-link:focus {
-  color: #2196f3;
-}
 .logo {
+  margin-right: 93px;
+
+  color: #212121;
+
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
-  color: #212121;
 }
-
 .accent-logo {
   color: var(--accent-color);
 }
-.header-phone,
-.header-mail {
+
+.header-list {
+  display: flex;
+align-items: center;
+}
+.header-list .item {
+  margin-right: 50px;
+}
+.header-list .item:last-child {
+  margin-right: 0;
+}
+
+.navigation-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--secondary-text-color);
+
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.navigation-link:hover,
+.navigation-link:focus {
+  color: #2196f3;
+}
+
+.header-group {
+  margin-left: auto;
+  display: flex;
+ 
+}
+.item-group {
+  margin-right: 50px;
+}
+
+.header-phone,
+.header-mail {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
 
   color: var(--main-text-color);
@@ -110,15 +175,23 @@ body {
 .hero-section {
   background-color: var(--dark-background-color);
 }
+
+.hero-container {
+  text-align: center;
+}
+
 .hero-title {
+  outline: 1px solid red;
+
+  margin-bottom: 30px;
+
+  color: #ffffff;
+  background: #2f303a;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #ffffff;
-  background: #2f303a;
 }
 .button {
   font-family: inherit;
@@ -139,6 +212,10 @@ body {
 }
 
 .hero-button {
+  outline: 1px solid red;
+
+  width: 200px;
+  height: 50px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -154,6 +231,19 @@ body {
 | about-section 
 ===================
 */
+
+.about-list {
+  outline: 1px solid red;
+
+  display: flex;
+}
+.about-item {
+  width: 270px;
+  margin-right: 30px;
+}
+..about-item:last-child {
+  margin-right: 0;
+}
 .about-title {
   font-weight: 700;
   font-size: 14px;
@@ -176,7 +266,10 @@ body {
 | lessson-section 
 ===================
 */
+
 .lesson-title {
+  text-align: center;
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -184,11 +277,27 @@ body {
 
   color: var(--secondary-text-color);
 }
+
+.lessons-list {
+  display: flex;
+}
+
+.item {
+  width: 370px;
+  margin-right: 30px;
+}
+.item: last-child {
+  margin-right: 0;
+}
 /* 
 ===================
 | team-section 
 ===================
 */
+
+.container-team {
+  text-align: center;
+}
 .our-team {
   font-weight: 700;
   font-size: 36px;
@@ -196,6 +305,18 @@ body {
   letter-spacing: 0.03em;
 
   color: var(--secondary-text-color);
+}
+
+.team-list {
+  display: flex;
+}
+.team-item {
+  width: 270px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+..team-item:last-child {
+  margin-right: 0;
 }
 .team-name {
   font-weight: 500;
@@ -221,12 +342,60 @@ body {
 | filters-section 
 ===================
 */
+.container {
+  outline: 1px solid red;
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.filters {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+.filters .filters-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.filters .filters-item {
+  margin-right: 8px;
+}
 
+.filters .filters-item:last-child {
+  margin-right: 0px;
+}
+.filters-button {
+  padding: 6px 22px;
+  border: none;
+  border-radius: 6px;
+}
 /* 
 ===================
 | project-section 
 ===================
 */
+.project-container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.project-item {
+  width: 370px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.project-item:nth-child(3n) {
+  margin-right: 0;
+}
+.project-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
 
 .project-header {
   font-weight: 700;
@@ -252,6 +421,10 @@ body {
 */
 .footer {
   background-color: #2f303a;
+}
+
+.logo {
+  margin-right: 93px;
 }
 .logo-footer {
   font-family: 'Raleway';
